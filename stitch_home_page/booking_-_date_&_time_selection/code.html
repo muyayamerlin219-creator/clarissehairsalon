@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clarisse Hair Salon - Booking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#D4AF37",
+            "background-light": "#F5F5DC",
+            "background-dark": "#2d2d2d",
+            "text-light": "#3b2f2f",
+            "text-dark": "#f5f5f5",
+            "accent": "#8B4513",
+            "muted": "#a9a9a9"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20 xl:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col w-full max-w-6xl flex-1">
+<div class="flex flex-wrap justify-between gap-3 p-4">
+<div class="flex min-w-72 flex-col gap-3">
+<p class="text-4xl font-black leading-tight tracking-[-0.033em] text-text-light dark:text-text-dark">Book Your Appointment</p>
+<p class="text-base font-normal leading-normal text-text-light/70 dark:text-text-dark/70">Select a date and time that works for you.</p>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 p-4">
+<div class="flex flex-col lg:w-1/2">
+<div class="flex flex-wrap items-end gap-4 px-4 py-3">
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Select Stylist</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border border-text-light/20 dark:border-text-dark/20 bg-background-light dark:bg-background-dark focus:border-primary h-14 p-[15px] text-base font-normal leading-normal">
+<option>Any</option>
+<option>Clarisse</option>
+<option>David</option>
+<option>Aisha</option>
+</select>
+</label>
+<label class="flex flex-col min-w-40 flex-1">
+<p class="text-base font-medium leading-normal pb-2 text-text-light dark:text-text-dark">Select Service</p>
+<select class="form-select flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-text-light dark:text-text-dark focus:outline-0 focus:ring-0 border border-text-light/20 dark:border-text-dark/20 bg-background-light dark:bg-background-dark focus:border-primary h-14 p-[15px] text-base font-normal leading-normal">
+<option>Men's Haircut</option>
+<option>Women's Haircut</option>
+<option>Hair Coloring</option>
+<option>Braiding</option>
+</select>
+</label>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6 p-4">
+<div class="flex w-full max-w-[400px] flex-1 flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between">
+<button class="text-text-light dark:text-text-dark flex size-10 items-center justify-center">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<p class="text-lg font-bold leading-tight flex-1 text-center text-text-light dark:text-text-dark">October 2024</p>
+<button class="text-text-light dark:text-text-dark flex size-10 items-center justify-center">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-7">
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">W</p>
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">F</p>
+<p class="text-text-light/70 dark:text-text-dark/70 text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<button class="h-12 w-full text-muted col-start-3 text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">1</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">2</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">3</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">4</div>
+</button>
+<button class="h-12 w-full text-muted text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">5</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">6</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">7</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">8</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">9</div>
+</button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary">10</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">11</div>
+</button>
+<button class="h-12 w-full text-muted text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">12</div>
+</button>
+<button class="h-12 w-full text-muted text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">13</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">14</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">15</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">16</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">17</div>
+</button>
+<button class="h-12 w-full text-muted text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">18</div>
+</button>
+<button class="h-12 w-full text-muted text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">19</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">20</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">21</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">22</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">23</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">24</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">25</div>
+</button>
+<button class="h-12 w-full text-muted text-sm font-medium leading-normal cursor-not-allowed">
+<div class="flex size-full items-center justify-center rounded-full">26</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">27</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">28</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">29</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">30</div>
+</button>
+<button class="h-12 w-full text-text-light dark:text-text-dark text-sm font-medium leading-normal hover:bg-primary/20 dark:hover:bg-primary/30">
+<div class="flex size-full items-center justify-center rounded-full">31</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col lg:w-1/2 mt-8 lg:mt-0">
+<h2 class="text-2xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5 text-text-light dark:text-text-dark">Available Times for October 10, 2024</h2>
+<div class="flex gap-3 p-3 flex-wrap pr-4">
+<button class="h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark border border-text-light/20 dark:border-text-dark/20 px-6 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-black">
+<p class="text-sm font-medium leading-normal">10:00 AM</p>
+</button>
+<button class="h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark border border-text-light/20 dark:border-text-dark/20 px-6 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-black">
+<p class="text-sm font-medium leading-normal">11:00 AM</p>
+</button>
+<button class="h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-muted/40 text-muted cursor-not-allowed px-6">
+<p class="text-sm font-medium leading-normal">12:00 PM</p>
+</button>
+<button class="h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-primary text-white dark:text-black px-6">
+<p class="text-sm font-medium leading-normal">2:00 PM</p>
+</button>
+<button class="h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-muted/40 text-muted cursor-not-allowed px-6">
+<p class="text-sm font-medium leading-normal">3:00 PM</p>
+</button>
+<button class="h-12 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-background-light dark:bg-background-dark border border-text-light/20 dark:border-text-dark/20 px-6 hover:bg-primary hover:text-white dark:hover:bg-primary dark:hover:text-black">
+<p class="text-sm font-medium leading-normal">4:00 PM</p>
+</button>
+</div>
+<div class="mt-8 p-4 bg-white/50 dark:bg-black/20 rounded-xl shadow-md">
+<h3 class="text-xl font-bold mb-4 text-text-light dark:text-text-dark">Booking Summary</h3>
+<div class="space-y-3 text-text-light/90 dark:text-text-dark/90">
+<div class="flex justify-between">
+<span class="font-medium">Service:</span>
+<span>Men's Haircut</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Stylist:</span>
+<span>Clarisse</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Date:</span>
+<span>October 10, 2024</span>
+</div>
+<div class="flex justify-between">
+<span class="font-medium">Time:</span>
+<span>2:00 PM</span>
+</div>
+<div class="flex justify-between border-t border-text-light/20 dark:border-text-dark/20 pt-3 mt-3">
+<span class="font-bold">Total:</span>
+<span class="font-bold">$45.00</span>
+</div>
+</div>
+<button class="mt-6 w-full h-14 bg-accent text-white rounded-lg text-lg font-bold hover:bg-accent/90 transition-colors">
+                  Book Now
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Employee Availability Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181114] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-row">
+<aside class="flex flex-col w-64 bg-white dark:bg-[#181114] border-r border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-4 p-4 flex-grow">
+<div class="flex gap-3 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Clarisse Hair Salon logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNHvaRPsKXEYIS6BZlBkEkX1Gjvy3e8x9rZLQoI2FAqrCQsG3dQ9tHV6dLka2mvaxTErHC8ttzj1LWvsw-maOrb8Q7YSTcUekCcm4_jHmab_XYxYTuKthFHQVS3cEWGhoflMUUELFNSGYXg--31qnrHifuXweg_KbH-FAUUxInJzp9rin3-Ihycy49mltl-27ca9J-NvSiyavog12J89MVmf9RY_R8Ua7JF6ok7qi9VXvCYKsHp_XTy5IGHroOzLlkgFLqwy-x_GTo");'></div>
+<div class="flex flex-col">
+<h1 class="text-[#181114] dark:text-white text-base font-medium leading-normal">Clarisse Hair Salon</h1>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Manager</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-[#181114] dark:text-white hover:bg-background-light dark:hover:bg-background-dark rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#181114] dark:text-white hover:bg-background-light dark:hover:bg-background-dark rounded-lg" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<p class="text-sm font-medium leading-normal">Bookings</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<p class="text-sm font-medium leading-normal">Employees</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 text-[#181114] dark:text-white hover:bg-background-light dark:hover:bg-background-dark rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+</div>
+<div class="p-4 border-t border-gray-200 dark:border-gray-800">
+<a class="flex items-center gap-3 px-3 py-2 text-[#181114] dark:text-white hover:bg-background-light dark:hover:bg-background-dark rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-6 lg:p-8">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-wrap justify-between gap-4 items-center mb-8">
+<div class="flex flex-col gap-2">
+<p class="text-[#181114] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Employee Availability</p>
+<p class="text-[#896175] dark:text-gray-400 text-base font-normal leading-normal">Set and modify employee availability, block out time slots, and manage scheduling conflicts.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="truncate">Add New Employee</span>
+</button>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="w-full lg:w-1/3">
+<div class="bg-white dark:bg-[#181114] p-4 rounded-xl shadow-sm">
+<div class="flex min-w-72 max-w-[336px] flex-1 flex-col gap-0.5">
+<div class="flex items-center p-1 justify-between">
+<button class="text-[#181114] dark:text-white">
+<div class="flex size-10 items-center justify-center" data-icon="CaretLeft" data-size="18px" data-weight="regular">
+<span class="material-symbols-outlined">chevron_left</span>
+</div>
+</button>
+<p class="text-[#181114] dark:text-white text-base font-bold leading-tight flex-1 text-center">October 2024</p>
+<button class="text-[#181114] dark:text-white">
+<div class="flex size-10 items-center justify-center" data-icon="CaretRight" data-size="18px" data-weight="regular">
+<span class="material-symbols-outlined">chevron_right</span>
+</div>
+</button>
+</div>
+<div class="grid grid-cols-7 text-[#181114] dark:text-gray-300">
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">M</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">W</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">T</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">F</p>
+<p class="text-[13px] font-bold leading-normal tracking-[0.015em] flex h-12 w-full items-center justify-center pb-0.5">S</p>
+<button class="h-12 w-full text-gray-400 dark:text-gray-500 text-sm font-medium leading-normal col-start-1">
+<div class="flex size-full items-center justify-center rounded-full">29</div>
+</button>
+<button class="h-12 w-full text-gray-400 dark:text-gray-500 text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full">30</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">1</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">2</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">3</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">4</div>
+</button>
+<button class="h-12 w-full text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full bg-primary">5</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">6</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">7</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">8</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">9</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">10</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">11</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">12</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">13</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">14</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">15</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">16</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">17</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">18</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">19</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">20</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">21</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">22</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">23</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">24</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">25</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">26</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">27</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">28</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">29</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">30</div>
+</button>
+<button class="h-12 w-full text-[#181114] dark:text-white text-sm font-medium leading-normal">
+<div class="flex size-full items-center justify-center rounded-full hover:bg-primary/10">31</div>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-2/3">
+<div class="bg-white dark:bg-[#181114] rounded-xl shadow-sm">
+<h2 class="text-[#181114] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-6 pt-5 pb-3">Team Schedule</h2>
+<div class="flex flex-col">
+<div class="flex items-center gap-4 bg-white dark:bg-[#181114] px-6 min-h-[72px] py-2 justify-between border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Photo of Ciara" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB0nBHdLK7A0dP0xaH1Ez8ggqdTlMxphPiTo32_k2NfyIy3c-HyV8x0DHdH2oqLQVMeUJflwRUESVSFFAhtXB46VdoJoa73hIhjihPWdRm_JZsP8tbFeHWh8VjVIKXQmk2sMpR42zU_1CZO56Wvt8vNaeYA-j30cJouYUBp9EPCfYM5dItle6v7OojCZd3gUZTBPkWPVg8kqXsKjnJTbJaCC-ozWsI6J6YRQqccl0Ipoxwx11PYYBMjyLL3EhySSkghjwjLr6HKEjXW");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal line-clamp-1">Ciara</p>
+<p class="text-green-500 text-sm font-normal leading-normal line-clamp-2">Available</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-background-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-[#181114] px-6 min-h-[72px] py-2 justify-between border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Photo of Marcus" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC-0xeq1fCx3R-sQUu8CCMbGWVgePoWo5LwjNXuNwN4THABdjt-I1KhWbK8Dd8Ets6PoRs47l_xHFNBG8ib0S6msix4Ca6R3UuAb55lx6RccYaMbhCUcN2lnl2UdLGPiS5ccdJCkxTbdWKNxqXY0Y5Pq8fwZieWBQCugveqUdNNNM07REGFTJ-FzOXWa2b0VyueX7sXmipXK5InYzg9n5Wk9FPVHWCzBLOkMTxXFkIEdnNf7Tqr_1Og507ejirI1Inn5mnun9KNQrSE");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal line-clamp-1">Marcus</p>
+<p class="text-green-500 text-sm font-normal leading-normal line-clamp-2">Available</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-background-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-[#181114] px-6 min-h-[72px] py-2 justify-between border-b border-gray-200 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Photo of Chloe" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCNfgHgspRZ6kecZ0dSQXMEjC2DGFJ1xVJrXtyK_4zdD--0A7RrY8bKZzl_nB1wABvRwUbAli3PR5C4s7O48NgxsRoGv-VRP_tv3rlcjIRbvkcqBD0VFgVtbtsYfeayQhPegl8Xxce_6cKk24PlRdHcNfi51Gqs4DiDCL2nUoPaDoUmaan319wJuyrdBu3hw8BegzsCuQ9abE44S94zKTmrNf_2DzAPmtPynbQpub7BDF2-2WxPiNMgauLV-CYkehhiHRCxPHuQc5hm");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal line-clamp-1">Chloe</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal line-clamp-2">Unavailable</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-background-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-white dark:bg-[#181114] px-6 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-14 w-14" data-alt="Photo of Jordan" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDVeGEw5fZlk0hveCbMCM7-aOWCxlKPr0khbtSjBM5JXc1oxUF29V2A6WHBvjmCgtEho9ghgsI29hkSXwbsWar5-5xltiFUGQoLEzthTWbsnNkCc3UH1U1pj8_bT0EB9l2tOlm4SimIHd2dBWsZGnRqPgeEsv4oCW80fNBgDxlbkRjK9HWfQYhNaHyT1MZuB6XRFDtRXLkHZ7mpzSUiLMs3vgxAX8Ks0fIeJftgSTFcy3vVHe3f-ofb6dAwxnAOx71-nGuOtDnoOobe");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal line-clamp-1">Jordan</p>
+<p class="text-green-500 text-sm font-normal leading-normal line-clamp-2">Available</p>
+</div>
+</div>
+<div class="shrink-0">
+<label class="relative flex h-[31px] w-[51px] cursor-pointer items-center rounded-full border-none bg-background-light dark:bg-background-dark p-0.5 has-[:checked]:justify-end has-[:checked]:bg-primary">
+<div class="h-full w-[27px] rounded-full bg-white" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px, rgba(0, 0, 0, 0.06) 0px 3px 1px;"></div>
+<input checked="" class="invisible absolute" type="checkbox"/>
+</label>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

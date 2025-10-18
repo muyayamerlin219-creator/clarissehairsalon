@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clarisse Hair Salon - Content Manager</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#800020",
+                        "secondary": "#FFD700",
+                        "background-light": "#F5F5F5",
+                        "background-dark": "#1a1a1a",
+                        "text-light": "#333333",
+                        "text-dark": "#F5F5F5",
+                        "neutral": "#F5F5F5"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-light dark:text-text-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="flex h-full grow">
+<aside class="w-64 bg-white dark:bg-background-dark p-4 flex flex-col justify-between border-r border-gray-200 dark:border-gray-700">
+<div>
+<div class="flex items-center gap-3 mb-8">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDzKGiR5jJM7X-jo0Eu3N6g6FZpHaxWHTK1078uamwcG5PHVvJVrI61uZ6go_6sAHCSXNBAtamfLWgbB4lFWNipzg5MpxxEIqtXjjHwSJwDBrA_lIn239PN3HTDutfhqwdQk8jsEu0Q-YSUUDjFy13IaSDCgQjHPgipx39gwv-PODXnfvNpyhBEg-TGRPsH2qydTLQPNASdsHgH6GKRIJ2XlIrZdlavqDERLCiaXvG3fNYcMXQWCyxBglCqjM8JpaKn_uRUXBye8O7v");'></div>
+<div class="flex flex-col">
+<h1 class="text-text-light dark:text-text-dark text-lg font-bold">Clarisse Hair Salon</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm">Manager</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20 text-primary dark:text-secondary" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-medium">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">cut</span>
+<p class="text-sm font-medium">Services</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">photo_library</span>
+<p class="text-sm font-medium">Gallery</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">contact_phone</span>
+<p class="text-sm font-medium">Contact Info</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">groups</span>
+<p class="text-sm font-medium">Team</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800" href="#">
+<span class="material-symbols-outlined">schedule</span>
+<p class="text-sm font-medium">Operating Hours</p>
+</a>
+</nav>
+</div>
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide mt-8">
+<span class="truncate">Logout</span>
+</button>
+</aside>
+<main class="flex-1 p-8">
+<div class="flex flex-wrap justify-between items-center gap-4 mb-8">
+<div class="flex flex-col gap-1">
+<h1 class="text-4xl font-black tracking-tighter">Website Content Manager</h1>
+<p class="text-gray-500 dark:text-gray-400">Edit all customer-facing website content.</p>
+</div>
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-lg h-10 px-6 bg-gray-200 dark:bg-gray-700 text-text-light dark:text-text-dark text-sm font-bold tracking-wide">
+<span class="truncate">Preview</span>
+</button>
+<button class="flex items-center justify-center rounded-lg h-10 px-6 bg-secondary text-primary text-sm font-bold tracking-wide">
+<span class="truncate">Publish Changes</span>
+</button>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Services Section -->
+<section>
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-2xl font-bold tracking-tight">Services</h2>
+<button class="flex items-center gap-2 justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Add New Service</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-white dark:bg-background-dark rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex items-start gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined">female</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-lg">Women's Haircut</p>
+<p class="text-primary font-semibold">$75</p>
+<p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">A stylish and modern haircut for women, tailored to your preference.</p>
+</div>
+<button class="text-secondary text-sm font-bold">Edit</button>
+</div>
+</div>
+<div class="bg-white dark:bg-background-dark rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex items-start gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 dark:bg-primary/20 shrink-0 size-12">
+<span class="material-symbols-outlined">male</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-lg">Men's Barbering</p>
+<p class="text-primary font-semibold">$40</p>
+<p class="text-gray-500 dark:text-gray-400 mt-1 text-sm">Classic men's haircut and beard trim by our professional barbers.</p>
+</div>
+<button class="text-secondary text-sm font-bold">Edit</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section>
+<div class="flex justify-between items-center mb-4">
+<h2 class="text-2xl font-bold tracking-tight">Gallery</h2>
+<button class="flex items-center gap-2 justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold tracking-wide">
+<span class="material-symbols-outlined">upload</span>
+<span class="truncate">Upload New Image</span>
+</button>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover rounded-lg" data-alt="a woman with long, curly black hair smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAaS9QRKFBUpX6QHWYHKJMA6T7XisoZVVdv5eYFa6yXMV59QPbOO7S3TcTOHP9WxuK69wOx7RqwHkOXhorFCb3vzAgJoK4nqqmfS0Qs2gST5qTK3LykwKJJhZunuOPbRzvWPD_6dzc9ikZ-Y8rkuzIDiySYudguuB9AXWyavf4sZBIEqvbfsyp_86JpK_5yB59oQfsRlkAzZfSG48a8os5YGgBADeww7l1eguUuFimRav-OTFNGRiopIYJn-RaNfkaVEmZJpxkfHBt"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white text-sm font-bold">Delete</button>
+</div>
+</div>
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover rounded-lg" data-alt="a man getting a haircut from a barber" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCw-gDc2gXr0rgcbv6qSa3-5KbXHTvqmsfDNSqQPWAUDq7H1HEhA-VWKJN5FZyRkA2G3qw5odQ18pTW1WmzIO02fj3pHDPRcrkGYQAvmPi0RwdmY7TgsWX0-pM9MP1wm8yzLmw_tpSQVslFseFqTA1nx7ROhjtBHytBf52AKwf70GZfno4TzO57vA_TcKLjV9ozW5LWPYmazFeUGzaSVFb0vf5t6rjK70ctEciVWcr-n7IoZuGkA6GtnlPMdOTMOoQPpzBM2JaSrtRP"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white text-sm font-bold">Delete</button>
+</div>
+</div>
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover rounded-lg" data-alt="a woman with braids sitting in a salon chair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd7HcuhHeV1gJY5dL658qcui3S57XE6Ogk1DZjh37A3etm-TlOBQhRD6VJSKGBPyE4RjAAWdiir-gue8tov9V37VLRxW7Q-Nx7sYy_5rBQ7fov39hJ0wZ5O9iHdf-Zh4gD_vq3xx4oYKH33i0VwE3tynMHHzsecaF1YqwChZmBy6f_STRDiGinWwTSJcgRI9MNLfdCwU1TIFaIA3FjOFKF1l7CvmgzFPIVXwukKb8H7SQasbUnNU-DdX4uOQrWEJq4E1e_21xulEev"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white text-sm font-bold">Delete</button>
+</div>
+</div>
+<div class="relative group aspect-square">
+<img class="w-full h-full object-cover rounded-lg" data-alt="a close up of a man's beard being trimmed" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAn4IMMm3g83fmxACW7iaJ5VZ5jQecCJ_q71BufXCVC1L2KBfI1EkAp-YsNVz9INiSwkGxRrvqDYLJrOkQ5i3SkOFVl-A6CfpFW7PSSXfVXDbwOj9Ws4AJQfQdIU2lznnIoe0mvGlhl27JqrDipmLQA9L9_LiYsiX3LAlb7_bhE62Oq-RSA7khAFqEn6hvEYE2gVZyw1ma3pdFMFk3_zfMSoA_Ooc24yPZX3puzHWGQWcbHWfDCFiUnOn-en5E7SkTXdfpaTdpH9t6x"/>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+<button class="text-white text-sm font-bold">Delete</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Business Information -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<h2 class="text-2xl font-bold tracking-tight mb-4">Business Information</h2>
+<div class="space-y-4 bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="salon-name">Salon Name</label>
+<input class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="salon-name" type="text" value="Clarisse Hair Salon"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="address">Address</label>
+<input class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="address" type="text" value="123 Main Street, Anytown, USA 12345"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="phone">Phone Number</label>
+<input class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="phone" type="tel" value="(123) 456-7890"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="email">Email</label>
+<input class="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="email" type="email" value="contact@clarissehair.com"/>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-2xl font-bold tracking-tight mb-4">Operating Hours</h2>
+<div class="space-y-4 bg-white dark:bg-background-dark p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
+<div class="flex items-center justify-between">
+<span class="font-medium">Monday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="09:00"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="18:00"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Tuesday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="09:00"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="18:00"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Wednesday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="09:00"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="18:00"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Thursday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="09:00"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="20:00"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Friday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="09:00"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="20:00"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Saturday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="10:00"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 shadow-sm text-sm" type="time" value="16:00"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+<div class="flex items-center justify-between">
+<span class="font-medium">Sunday</span>
+<div class="flex items-center gap-2">
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 shadow-sm text-sm" disabled="" type="time"/>
+<span>-</span>
+<input class="w-28 rounded-md border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-800 shadow-sm text-sm" disabled="" type="time"/>
+<label class="flex items-center gap-2 ml-4 text-sm"><input checked="" class="rounded text-primary focus:ring-primary" type="checkbox"/> Closed</label>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clarisse Hair Salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-40 flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f4f0f2] dark:border-b-[#3a2c33] px-4 sm:px-6 lg:px-10 py-3">
+<div class="flex items-center gap-4 text-[#181114] dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#181114] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Clarisse Hair Salon</h2>
+</div>
+<nav class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-[#181114] dark:text-white text-sm font-medium leading-normal" href="#">Services</a>
+<a class="text-[#181114] dark:text-white text-sm font-medium leading-normal" href="#">Stylists</a>
+<a class="text-[#181114] dark:text-white text-sm font-medium leading-normal" href="#">Gallery</a>
+<a class="text-[#181114] dark:text-white text-sm font-medium leading-normal" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Book Now</span>
+</button>
+</nav>
+<button class="md:hidden flex items-center justify-center size-10 rounded-lg border border-solid border-gray-200 dark:border-gray-700">
+<span class="material-symbols-outlined text-[#181114] dark:text-white">menu</span>
+</button>
+</header>
+<main class="flex-grow">
+<div class="@container">
+<div class="@[480px]:p-4">
+<div class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4" data-alt="A stylish black woman with intricate braids smiling." style='background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvNpjOPnYk9Tai6AljNA1XyPGgEycHLhz2P2n05Mzf7Wr7bMczqMlBvtrwqZqpzdQaOFhuUW7u3pZtdpLaCmZ9DvqyURbu06VxS8J7C5KQdC_hG_eUQ1Os5m_ZpZNWUrTUXeSsXQYAbLgdOyMXz7GJa00bA4Ye50YS9oMVQW5uc9kSGVehZxsi4URViXJwoaonp_6EJOnOvC9e5efA1bWmONH6lk6uopOkcyM0fAEaG83ecKoqoBJgL3Y1W2cxHQdgom0wjBRyc9f5");'>
+<div class="flex flex-col gap-2 text-center">
+<h1 class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
+                                            Experience the Art of Hair at Clarisse
+                                        </h1>
+<h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal max-w-2xl">
+                                            Specializing in exquisite styles for black women and professional barbering for men. Your hair journey starts here.
+                                        </h2>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-10 px-4 py-10 @container">
+<div class="flex flex-col gap-4 text-center items-center">
+<h2 class="text-[#181114] dark:text-white tracking-light text-[32px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
+                                    Our Signature Services
+                                </h2>
+<p class="text-[#896175] dark:text-gray-400 text-base font-normal leading-normal max-w-[720px]">
+                                    From natural hair care to precision cuts, we offer a wide range of services to meet your needs.
+                                </p>
+</div>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4">
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="Close up of a woman's healthy, natural curly hair." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtcFwKMD-zCivWMDx03-DrIIHkxl5AgeeO2rJhGUP9qYibAMiJPYLivRWbeqZOPle7EQuUFsOLVVWrR0j7i1724hYXfJngQgvGycfp1G_Npu8EilJJaW3qUje5kQlPOXSYXeIWwOCO4Qh0FrnqcyvCnpk4auRM7yVAIvJrsXIMFw6J-yp2wyJVNBEcYSpo7uke39slNCdz6vo91wxNzdCep67bkDmNmj0X9MWDDeej0_v-0jY88KokdkJGSEhO9xOceaa1dGuBaCZL");'></div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Natural Hair Care</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Embrace your natural texture with our nourishing treatments and styling.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A woman with intricate, beautiful box braids." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkH6bb_Btnlyoo2PJiswAmFUuDfkKUL1wXgF1ekfdyOcCyJpbI4Lf_bhCJ6m_a3c37FvVZ37f4ITkGOSNiN0LxW1S2Q9SrT_1sYAYLS3rAY5nYMHGBs7cmf_Rs5mwrG8JiR5UXemhPWlPLgvEkuNKeUjx8rcR8rFNnaBMfdv08QFJXwcKaQLRRdeIxOJHcKweJcBhsHpAZ5AWEeskj4VyV73nNQjZKGzpbB_-HjhimA2sVO-TPE0vUSyXSSZYU3PJ05TAAJXgcCwNX");'></div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Expert Braiding</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Intricate and beautiful braiding styles that protect and adorn.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A man getting a sharp haircut from a barber." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWYDmp7TQ0gwhR1IvDzlmOnWTIu7UJQUYUZ_GomDsOeBT3BzFgqITb3aZJeVSJJl1qRxsexPA6RIp9N6rxb7gxeJuRMcxJj1ADnpnVVncjWSh0IXm3SUmw3mkXRwhbSS_Y7AwJYz-3kk_rQWuvRITpBMQZfcTVXFz7ttxUUaPSJOvRmOjQSwjs5JQ0DB6RrfWTYL9eMJsxAaGMoMQYgEeBx84E6APPGwNuMfP7hwEyJuznXAV7tnZY1u6hgTlElYfitKSxpjQbxKYJ");'></div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Precision Barbering</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Sharp cuts and classic shaves from our professional barbers.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 pb-3">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" data-alt="A woman with vibrant, professionally colored hair." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDL-Q85wyXzTCPctf2JJw0f4ShDPkOufZtnvTXeRzbz3Yp3HecG7TkxKbh9CXcCzdX7zzAqfwd2Km9IcCy4CZ62OPDsZjpsDoOKxULrRZKYEyZEMnSJxPk_yFI43xAVTUXmK-0ULO2E7-HXH8AO81FKvtdUw6sDUXzyNpDBitfqlLfj9WSJmTYAp4pxqoT2_tvhEkv2eY8BWNAkOV0knkFvumjeZk-y7w5npOcStiJfNb8Asf02bSvcEy-CXhNDAYtQD0TJAcXVP0Vn");'></div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Vibrant Color</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Transform your look with our custom color services.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4 px-4 py-10 bg-background-light dark:bg-background-dark">
+<h2 class="text-[#181114] dark:text-white text-center text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Meet Our Stylists</h2>
+<div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4">
+<div class="flex flex-col gap-3 text-center pb-3">
+<div class="px-4">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full" data-alt="Professional headshot of Clarisse, a smiling black woman." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvbOLlsHUuYO457rjGaPqPek8rvL3KFJhlLVbwubsHjkhrVt6gUsGvgHcyKez_CEPXiAimwfrLz27mJRhWS5HHJoXR5PJN8OCcMVfQbU8s8ZD3heKB4A9F14iiMOQV9AN3Okev--BLADa8zFBsdk3IKVy9PFTqQbZ9tOE02P6zGPj3M3bXfIxnLivGFCLgUjXJOzM_hq_YQ2_6tk_GD8qxufGIb_BSXylOJ3tkLT7uIQHXUTgJ0FnViYYqJ1xkfQtGlVIu11Hox4I0");'></div>
+</div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Clarisse</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Owner &amp; Master Stylist, specializing in natural hair.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 text-center pb-3">
+<div class="px-4">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full" data-alt="Professional headshot of Marcus, a man with a well-groomed beard." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAMc-OfO93mWwzMbl3d4Kxascihsl5B7VeGIe5gM9AwPoWKAnyT4kuJvJM2YWW7eBvuU_jjrDc9q13VgRu0ykbq1IJp4Yugf0xYZ_Za3Y7_qwOxRld7ZjuzCOgah3fCJqE29OoPisX-v07SgjIPQgyFMugcjhFdpN0LxI8kRB_TZUH0WrxTiLpY6ALPisWF4H2lz2rmbZhG4Z_Q0jRj5uKMIG4LQv5_4wQpQieIoCvIQbPEmOhIjZzl1o47BYBVqo7BE2-B0GnbK3pW");'></div>
+</div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Marcus</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Senior Barber, expert in fades and classic cuts.</p>
+</div>
+</div>
+<div class="flex flex-col gap-3 text-center pb-3">
+<div class="px-4">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-full" data-alt="Professional headshot of Tiffany, a woman with colorful hair." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiL7SUQ1KGXovvGRurCLEEglKdcdh-2h1g8oUnBjnKiq2iuizuiBd95SQl7OZs5yzaO1AijxfvpdffD3iOFR6L9tIecK78_2Qq3a-_0pBvBpbsq__eYmQEU3_94fOzwyd0S00Y0ZKNFE1wAhOwYZX36ThcOWSN9d8IwTNlvRk2h8L9-Clq5pnVhTkKx8PvviI4sPrkj_wJvBJaekWbJ94cn2iI7loR2rPnnRQLE94zs3cyc_Aw1ZhFXbYOi90eECnt_GxMlbv4zwNj");'></div>
+</div>
+<div>
+<p class="text-[#181114] dark:text-white text-base font-medium leading-normal">Tiffany</p>
+<p class="text-[#896175] dark:text-gray-400 text-sm font-normal leading-normal">Color Specialist, passionate about vibrant transformations.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-10">
+<h2 class="text-[#181114] dark:text-white text-center text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-8 pt-5">Location &amp; Hours</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="w-full h-80 rounded-lg overflow-hidden">
+<div class="w-full h-full bg-center bg-cover" data-alt="A stylized map showing the location of Clarisse Hair Salon" data-location="New York" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBZf_aiW0IVYkD0hOKDkl5Y357IZ6xdsWbs8Y0iB0zJ2fb_i0wtVXAzXb-mF8Vl_MjwjV_RquS_ZljUiycqXZgbsNYUv4WNco5XnD6S9k7yBIVhXZVOv7JdqhsTA5lyJpL-r_ZUUvUlJU4uto7Sor-M0HG3Wflj35wy_Cwe58Pv4Hp3S_24afS-LNSoI7zOFMGq6NBAnrN_iTBGPPhXMkxm9GiP9aUzs4kjb4poA63ephUeORD5Tzl50QA1MZZcXWpCbCS1ZFNJx56Z')"></div>
+</div>
+<div class="flex flex-col gap-4 text-center md:text-left">
+<div>
+<h3 class="text-[#181114] dark:text-white font-bold text-lg">Address</h3>
+<p class="text-[#896175] dark:text-gray-400">123 Beauty Lane, New York, NY 10001</p>
+</div>
+<div>
+<h3 class="text-[#181114] dark:text-white font-bold text-lg">Contact</h3>
+<p class="text-[#896175] dark:text-gray-400">info@clarissehair.com</p>
+<p class="text-[#896175] dark:text-gray-400">(123) 456-7890</p>
+</div>
+<div>
+<h3 class="text-[#181114] dark:text-white font-bold text-lg">Hours</h3>
+<p class="text-[#896175] dark:text-gray-400">Tuesday - Saturday: 9am - 7pm</p>
+<p class="text-[#896175] dark:text-gray-400">Sunday - Monday: Closed</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="border-t border-solid border-t-[#f4f0f2] dark:border-t-[#3a2c33] px-4 sm:px-6 lg:px-10 py-6 mt-10">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#896175] dark:text-gray-400 text-sm">© 2024 Clarisse Hair Salon. All rights reserved.</p>
+<div class="flex items-center gap-4">
+<a class="text-[#896175] dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-[#896175] dark:text-gray-400 hover:text-primary dark:hover:text-primary" href="#">
+<svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919C8.416 2.175 8.796 2.163 12 2.163zm0 1.44c-3.116 0-3.483.01-4.71.068-2.738.125-3.966 1.348-4.09 4.09C3.125 8.927 3.115 9.294 3.115 12s.01 3.073.068 4.3c.125 2.742 1.352 3.966 4.09 4.09 1.227.058 1.594.068 4.71.068s3.483-.01 4.71-.068c2.738-.125 3.966-1.348 4.09-4.09.058-1.227.068-1.594.068-4.71s-.01-3.483-.068-4.71c-.125-2.742-1.352-3.966-4.09-4.09C15.483 3.613 15.116 3.603 12 3.603z"></path><path d="M12 7.276a4.724 4.724 0 100 9.448 4.724 4.724 0 000-9.448zm0 7.906a3.182 3.182 0 110-6.364 3.182 3.182 0 010 6.364zM17.636 5.862a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4z"></path></svg>
+</a>
+<a class="text-[#896175] dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">Manager Login</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

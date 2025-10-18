@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Manager Dashboard - Clarisse Hair Salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ec1380",
+            "background-light": "#f8f6f7",
+            "background-dark": "#221019",
+            "text-light": "#181114",
+            "text-dark": "#f8f6f7",
+            "card-light": "#ffffff",
+            "card-dark": "#2d1620",
+            "border-light": "#e6dbe0",
+            "border-dark": "#442e39"
+          },
+          fontFamily: {
+            "display": ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "0.75rem",
+            "xl": "1rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      font-family: 'Manrope', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-display">
+<div class="relative flex min-h-screen w-full">
+<!-- SideNavBar -->
+<aside class="w-64 bg-card-light dark:bg-card-dark flex flex-col justify-between border-r border-border-light dark:border-border-dark">
+<div class="flex flex-col gap-4 p-4">
+<div class="flex items-center gap-3 px-3 py-2">
+<svg class="size-8 text-primary" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+<h2 class="text-text-light dark:text-text-dark text-xl font-bold">Clarisse</h2>
+</div>
+<div class="flex flex-col gap-2 mt-6">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-sm font-semibold">Dashboard</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-sm font-medium">Booking Calendar</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">groups</span>
+<p class="text-sm font-medium">Employee Management</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">schedule</span>
+<p class="text-sm font-medium">Availability Management</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">edit</span>
+<p class="text-sm font-medium">Content Editor</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">book</span>
+<p class="text-sm font-medium">Customer List</p>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-1 p-4">
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-sm font-medium">Settings</p>
+</div>
+<div class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-primary/10 dark:hover:bg-primary/20 cursor-pointer">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium">Logout</p>
+</div>
+</div>
+</aside>
+<main class="flex-1">
+<!-- TopNavBar -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-border-light dark:border-border-dark px-10 py-3 bg-card-light dark:bg-card-dark">
+<div class="flex items-center gap-4">
+<p class="text-text-light dark:text-text-dark text-sm font-medium">20 August 2024</p>
+</div>
+<div class="flex flex-1 justify-end gap-4">
+<button class="flex items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/20 text-primary">
+<span class="material-symbols-outlined">person</span>
+</button>
+</div>
+</header>
+<div class="p-10">
+<!-- PageHeading -->
+<div class="flex flex-wrap justify-between gap-3 mb-6">
+<p class="text-text-light dark:text-text-dark text-4xl font-black tracking-[-0.033em]">Welcome, Manager</p>
+</div>
+<!-- Stats -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark">
+<p class="text-text-light dark:text-text-dark text-base font-medium">Bookings Today</p>
+<p class="text-text-light dark:text-text-dark tracking-light text-4xl font-bold">12</p>
+<p class="text-green-600 text-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>+10% from yesterday</span>
+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark">
+<p class="text-text-light dark:text-text-dark text-base font-medium">Revenue Today</p>
+<p class="text-text-light dark:text-text-dark tracking-light text-4xl font-bold">$1,200</p>
+<p class="text-green-600 text-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>+5% from yesterday</span>
+</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark">
+<p class="text-text-light dark:text-text-dark text-base font-medium">New Customers This Week</p>
+<p class="text-text-light dark:text-text-dark tracking-light text-4xl font-bold">5</p>
+<p class="text-green-600 text-sm font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-base">arrow_upward</span>
+<span>+2% from last week</span>
+</p>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2">
+<!-- SectionHeader -->
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold tracking-[-0.015em] pb-4">Today's Schedule</h2>
+<!-- Upcoming Appointments -->
+<div class="bg-card-light dark:bg-card-dark rounded-xl border border-border-light dark:border-border-dark p-4 space-y-4">
+<div class="flex items-center p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark">
+<div class="w-16 text-sm font-semibold text-primary">09:00 AM</div>
+<div class="flex-1 px-4">
+<p class="font-bold">Aisha Williams</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Men's Haircut</p>
+</div>
+<div class="flex-1 px-4">
+<p class="text-sm font-medium">Assigned to: James</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase py-1 px-2.5 rounded-full bg-green-200 text-green-800">Confirmed</span>
+</div>
+</div>
+<div class="flex items-center p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark">
+<div class="w-16 text-sm font-semibold text-primary">10:30 AM</div>
+<div class="flex-1 px-4">
+<p class="font-bold">Michael Brown</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Silk Press</p>
+</div>
+<div class="flex-1 px-4">
+<p class="text-sm font-medium">Assigned to: Chloe</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase py-1 px-2.5 rounded-full bg-blue-200 text-blue-800">Arrived</span>
+</div>
+</div>
+<div class="flex items-center p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark">
+<div class="w-16 text-sm font-semibold">11:00 AM</div>
+<div class="flex-1 px-4">
+<p class="font-bold">Nia Adebayo</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Braids</p>
+</div>
+<div class="flex-1 px-4">
+<p class="text-sm font-medium">Assigned to: Keisha</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase py-1 px-2.5 rounded-full bg-green-200 text-green-800">Confirmed</span>
+</div>
+</div>
+<div class="flex items-center p-3 rounded-lg hover:bg-background-light dark:hover:bg-background-dark">
+<div class="w-16 text-sm font-semibold">01:00 PM</div>
+<div class="flex-1 px-4">
+<p class="font-bold">David Chen</p>
+<p class="text-sm text-text-light/70 dark:text-text-dark/70">Beard Trim</p>
+</div>
+<div class="flex-1 px-4">
+<p class="text-sm font-medium">Assigned to: James</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold uppercase py-1 px-2.5 rounded-full bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100">Completed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="space-y-8">
+<!-- Quick Access Panel -->
+<div>
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold tracking-[-0.015em] pb-4">Quick Access</h2>
+<div class="space-y-3">
+<button class="w-full flex items-center gap-4 p-4 rounded-xl bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="p-3 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<span class="font-semibold">Manage Employees</span>
+</button>
+<button class="w-full flex items-center gap-4 p-4 rounded-xl bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="p-3 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">schedule</span>
+</div>
+<span class="font-semibold">Set Availability</span>
+</button>
+<button class="w-full flex items-center gap-4 p-4 rounded-xl bg-card-light dark:bg-card-dark border border-border-light dark:border-border-dark hover:bg-primary/10 dark:hover:bg-primary/20 transition-colors">
+<div class="p-3 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">edit</span>
+</div>
+<span class="font-semibold">Edit Website Content</span>
+</button>
+</div>
+</div>
+<!-- Recent Activity Feed -->
+<div>
+<h2 class="text-text-light dark:text-text-dark text-[22px] font-bold tracking-[-0.015em] pb-4">Recent Activity</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">add_circle</span>
+<div>
+<p class="text-sm">New booking from <span class="font-bold">Lina Rodriguez</span> for a Wash &amp; Set.</p>
+<p class="text-xs text-text-light/60 dark:text-text-dark/60">2 minutes ago</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-green-500 mt-1">login</span>
+<div>
+<p class="text-sm"><span class="font-bold">Chloe</span> clocked in for her shift.</p>
+<p class="text-xs text-text-light/60 dark:text-text-dark/60">15 minutes ago</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-red-500 mt-1">cancel</span>
+<div>
+<p class="text-sm"><span class="font-bold">Mark Johnson</span> cancelled his 2:00 PM appointment.</p>
+<p class="text-xs text-text-light/60 dark:text-text-dark/60">1 hour ago</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Clarisse Hair Salon - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec1380",
+                        "background-light": "#f8f6f7",
+                        "background-dark": "#221019",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#181114] dark:text-white">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="bg-white dark:bg-[#11080c] border-b border-solid border-b-[#f4f0f2] dark:border-b-[#331825]">
+<div class="px-4 md:px-10 lg:px-20 mx-auto max-w-7xl">
+<div class="flex items-center justify-between whitespace-nowrap py-3">
+<div class="flex items-center gap-4 text-[#181114] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#181114] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Clarisse Hair Salon</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-sm font-medium leading-normal text-[#181114] dark:text-white" href="#">Home</a>
+<a class="text-sm font-medium leading-normal text-primary" href="#">Services</a>
+<a class="text-sm font-medium leading-normal text-[#181114] dark:text-white" href="#">Book Now</a>
+<a class="text-sm font-medium leading-normal text-[#181114] dark:text-white" href="#">About Us</a>
+<a class="text-sm font-medium leading-normal text-[#181114] dark:text-white" href="#">Contact</a>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</button>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Manager avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAwMlrk_V9o5wK6D6L0yaFYWLBJaCMi3i6yPcI5xSMafBetrAHDdD_w82wez6bDjwx0WlkPNEYLXbDyDuHCGjZLaAZ3MQ_x2voKvYGDTSkBvkKxw2IRtK5Yd4TQ6VHnJX5nC6pVXjMwbn53rL865Ub_-_qHdyy0FHei_3_gzY5BHuHvqHTKOnHOBzAKgTTVbRJ005gBdWNthCKsalZdkTm8EiesRFdshMiqeIUY51yhpSx22YBtKFBsoCh3_gVGMI2hxVSTtfy-DvIG");'></div>
+</div>
+<button class="md:hidden text-[#181114] dark:text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-1 px-4 md:px-10 lg:px-20 py-5">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-wrap justify-between gap-3 p-4 items-center">
+<p class="text-[#181114] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Our Services</p>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined">add</span>
+<span class="truncate">Add New Service</span>
+</button>
+</div>
+<div class="pb-3 mt-4">
+<div class="flex border-b border-[#e6dbe0] dark:border-[#331825] px-4 gap-8 overflow-x-auto">
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-primary text-primary pb-[13px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">All</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#896175] dark:text-[#a98fa0] pb-[13px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Natural Hair</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#896175] dark:text-[#a98fa0] pb-[13px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Braids &amp; Extensions</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#896175] dark:text-[#a98fa0] pb-[13px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Men's Cuts</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#896175] dark:text-[#a98fa0] pb-[13px] pt-4 whitespace-nowrap" href="#">
+<p class="text-sm font-bold leading-normal tracking-[0.015em]">Treatments</p>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 p-4">
+<div class="rounded-xl bg-white dark:bg-[#11080c] p-4 shadow-[0_0_12px_rgba(0,0,0,0.05)] dark:shadow-[0_0_12px_rgba(255,255,255,0.05)]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-4 flex-[2_2_0px]">
+<div class="flex flex-col gap-2">
+<p class="text-[#181114] dark:text-white text-lg font-bold leading-tight">Signature Silk Press</p>
+<p class="text-[#896175] dark:text-[#a98fa0] text-sm font-normal leading-normal">A classic silk press to straighten and smooth natural hair, leaving it shiny and bouncy. Includes wash and condition.</p>
+<p class="text-primary text-lg font-bold mt-2">R750</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+<span class="truncate">Book Now</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-medium leading-normal w-fit gap-2">
+<span class="material-symbols-outlined text-base">edit</span>
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1" data-alt="Silky straight black hair" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA1l-HRfaNcyIVobNQYQ7WkzxcNz52owAQembd588FXAdYsK5CH3bS4w-jjCN-pw-BBJ2rd_Ta_zQFy4H8P8c_66gH4gnW0D11iIUDcVWefxSTPA1h4G0QEWsZrr7jbZsZDNyueqd8Kwwz-6aYSIzvPbTnBkvdoTbMAfjnTUMf_IxTp6hHAiL85T8NBjZk1zTF1x-ZoqDjiTUzUc_Sn_Jtvw2wAZcb916hGjT_KTi1tC2mOOSpDWGc_OL_UElozVcikngVK5qIxAX2Q");'></div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-[#11080c] p-4 shadow-[0_0_12px_rgba(0,0,0,0.05)] dark:shadow-[0_0_12px_rgba(255,255,255,0.05)]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-4 flex-[2_2_0px]">
+<div class="flex flex-col gap-2">
+<p class="text-[#181114] dark:text-white text-lg font-bold leading-tight">Box Braids</p>
+<p class="text-[#896175] dark:text-[#a98fa0] text-sm font-normal leading-normal">Protective and stylish box braids, available in various sizes and lengths. Hair not included.</p>
+<p class="text-primary text-lg font-bold mt-2">From R1500</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+<span class="truncate">Book Now</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-medium leading-normal w-fit gap-2">
+<span class="material-symbols-outlined text-base">edit</span>
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1" data-alt="Woman with long box braids" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBkRWbQ4oRO-ugQQ4aMxukDjGWvkXiJYJAytoVix54XhCUCV4WwbPW3gaZ1-75RHKacR4v3VSsn6BbWS_HGWqXjD9Pe2zHxItWTbt6y9F7n_BXp9wbg72RbDnr4r_q8iZt9KPuNaSonmdz21jQAHdQ1p7E4UHxHwGblWOCAFhxLv-4mx4WSUkb9_FyumMyZU020bq64zzfg8OsDGmQETKNUW3lBq6UJhJowJ2lQqmWRUss06o1_-fhA9wl--ymegmwYm0ATPQqJq4uV");'></div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-[#11080c] p-4 shadow-[0_0_12px_rgba(0,0,0,0.05)] dark:shadow-[0_0_12px_rgba(255,255,255,0.05)]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-4 flex-[2_2_0px]">
+<div class="flex flex-col gap-2">
+<p class="text-[#181114] dark:text-white text-lg font-bold leading-tight">Men's Fade</p>
+<p class="text-[#896175] dark:text-[#a98fa0] text-sm font-normal leading-normal">A precision fade haircut by our professional barbers. Includes optional line-up and razor finish.</p>
+<p class="text-primary text-lg font-bold mt-2">R400</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+<span class="truncate">Book Now</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-medium leading-normal w-fit gap-2">
+<span class="material-symbols-outlined text-base">edit</span>
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1" data-alt="Man with a fresh fade haircut" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBK3y12GbKSwSdRnyz5owS43JhnXIhUu5pRj9or_FH7FLjhvV3d2kf2Bc37tgzOGOWuC-iduQ-uCOohuOqpyUy2Wx73cg_bpAUrBEd2SE80yujVqEGeATI3Tdfka4Fr7p8wvaw5ElEG8ydO_Ai4pBUFa22vEkgZqoGvdQYc5CNZ08p4-1M4JzUwr8sqAZcSnArmx3L0x9WDNU2wRsDivO9uAwtVLumM_6g7FkfkJqDaWD8WjaPUSKNgqj37bc_tKEeiQ5CUbp6CL1dM");'></div>
+</div>
+</div>
+<div class="rounded-xl bg-white dark:bg-[#11080c] p-4 shadow-[0_0_12px_rgba(0,0,0,0.05)] dark:shadow-[0_0_12px_rgba(255,255,255,0.05)]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-col gap-4 flex-[2_2_0px]">
+<div class="flex flex-col gap-2">
+<p class="text-[#181114] dark:text-white text-lg font-bold leading-tight">Deep Conditioning Treatment</p>
+<p class="text-[#896175] dark:text-[#a98fa0] text-sm font-normal leading-normal">An intensive deep conditioning treatment to restore moisture, elasticity, and shine to dry or damaged hair.</p>
+<p class="text-primary text-lg font-bold mt-2">R550</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary text-white text-sm font-medium leading-normal w-fit">
+<span class="truncate">Book Now</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-primary/20 dark:bg-primary/30 text-primary text-sm font-medium leading-normal w-fit gap-2">
+<span class="material-symbols-outlined text-base">edit</span>
+<span class="truncate">Edit</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1" data-alt="Woman having her hair conditioned" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDpfHFr8uH1OkAfRI6yQMqiiLul7MEB7k5lCw3v5W2tOfMlyE2gsZsKh4R0BAZZNHczO4t6Q8ysq8ei0NV9lMOYNkvvZs86HE5dcXiYe6hO1bcuKygOHjZyIj0M1fYF_sMw-uLvUMWDfA3hrXOM9bmHFcVxAdl1RZVNYTWQKL5KqLdyK6840Z8HHmL4ncQ1nCrR2tvu93AXIcYoB7V62Ih-NHG3CZR6HEZC9eQIPVuZNR2JIPJNcuY9NNdXaiDzhHfyHv_i7tv9eb99");'></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-white dark:bg-[#11080c] border-t border-solid border-t-[#f4f0f2] dark:border-t-[#331825] mt-10">
+<div class="px-4 md:px-10 lg:px-20 mx-auto max-w-7xl py-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-4 text-[#181114] dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 4H17.3334V17.3334H30.6666V30.6666H44V44H4V4Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-[#181114] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Clarisse Hair Salon</h2>
+</div>
+<div class="flex items-center gap-6 text-sm text-[#896175] dark:text-[#a98fa0]">
+<a class="hover:text-primary" href="#">About Us</a>
+<a class="hover:text-primary" href="#">Contact</a>
+<a class="hover:text-primary" href="#">Privacy Policy</a>
+</div>
+<div class="flex gap-4">
+<a class="text-[#896175] dark:text-[#a98fa0] hover:text-primary" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-[#896175] dark:text-[#a98fa0] hover:text-primary" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg>
+</a>
+<a class="text-[#896175] dark:text-[#a98fa0] hover:text-primary" href="#">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.345 2.525c.636-.247 1.363-.416 2.427-.465C9.792 2.013 10.146 2 12.315 2zm-1.161 4.705a.738.738 0 01.738-.738h1.238a.738.738 0 01.738.738v1.238a.738.738 0 01-.738.738h-1.238a.738.738 0 01-.738-.738V6.705zM12 8.167c-2.12 0-3.833 1.713-3.833 3.833s1.713 3.833 3.833 3.833 3.833-1.713 3.833-3.833S14.12 8.167 12 8.167z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>
